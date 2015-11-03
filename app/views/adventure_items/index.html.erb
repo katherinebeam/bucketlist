@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Location</th>
+      <th>City</th>
+      <th>Neighborhood</th>
       <th>Category</th>
       <th>Points</th>
       <th>Picture</th>
@@ -18,7 +19,8 @@
     <% @adventure_items.each do |adventure_item| %>
       <tr>
         <td><%= adventure_item.title %></td>
-        <td><%= adventure_item.location %></td>
+        <td><%= adventure_item.city %></td>
+        <td><%= adventure_item.neighborhood %></td>
         <td><%= adventure_item.category %></td>
         <td><%= adventure_item.points %></td>
         <td><%= adventure_item.picture %></td>
