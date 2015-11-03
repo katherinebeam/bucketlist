@@ -1,0 +1,2 @@
+module AdventureItemsHelper
+end

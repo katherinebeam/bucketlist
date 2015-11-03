@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Adventure Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Category</th>
+      <th>Points</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adventure_items.each do |adventure_item| %>
+      <tr>
+        <td><%= adventure_item.title %></td>
+        <td><%= adventure_item.location %></td>
+        <td><%= adventure_item.category %></td>
+        <td><%= adventure_item.points %></td>
+        <td><%= link_to 'Show', adventure_item %></td>
+        <td><%= link_to 'Edit', edit_adventure_item_path(adventure_item) %></td>
+        <td><%= link_to 'Destroy', adventure_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adventure item', new_adventure_item_path %>
