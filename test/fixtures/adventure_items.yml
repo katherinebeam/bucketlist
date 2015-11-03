@@ -5,9 +5,11 @@ one:
   location: MyString
   category: MyString
   points: 1
+  picture: MyString
 
 two:
   title: MyString
   location: MyString
   category: MyString
   points: 1
+  picture: MyString

@@ -5,6 +5,7 @@ class CreateAdventureItems < ActiveRecord::Migration
       t.string :location
       t.string :category
       t.integer :points
+      t.string :picture
 
       t.timestamps null: false
     end

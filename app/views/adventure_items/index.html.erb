@@ -9,6 +9,7 @@
       <th>Location</th>
       <th>Category</th>
       <th>Points</th>
+      <th>Picture</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= adventure_item.location %></td>
         <td><%= adventure_item.category %></td>
         <td><%= adventure_item.points %></td>
+        <td><%= adventure_item.picture %></td>
         <td><%= link_to 'Show', adventure_item %></td>
         <td><%= link_to 'Edit', edit_adventure_item_path(adventure_item) %></td>
         <td><%= link_to 'Destroy', adventure_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
