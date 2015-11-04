@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-
+ before_action :authorize, only: [:show]
+ 
  def new
   end
 
@@ -9,9 +10,12 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      redirect_to '/signup'
+      redirect_to '/signup' 
+      flash[:notice] = "This login is already taken!"
     end
   end
+
+
 
 private
 
