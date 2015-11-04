@@ -2,7 +2,8 @@ class CreateAdventureItems < ActiveRecord::Migration
   def change
     create_table :adventure_items do |t|
       t.string :title
-      t.string :location
+      t.string :city
+      t.string :neighborhood
       t.string :category
       t.integer :points
       t.string :picture

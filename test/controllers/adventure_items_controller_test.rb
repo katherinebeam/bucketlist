@@ -18,7 +18,7 @@ class AdventureItemsControllerTest < ActionController::TestCase
 
   test "should create adventure_item" do
     assert_difference('AdventureItem.count') do
-      post :create, adventure_item: { category: @adventure_item.category, location: @adventure_item.location, picture: @adventure_item.picture, points: @adventure_item.points, title: @adventure_item.title }
+      post :create, adventure_item: { category: @adventure_item.category, city: @adventure_item.city, neighborhood: @adventure_item.neighborhood, picture: @adventure_item.picture, points: @adventure_item.points, title: @adventure_item.title }
     end
 
     assert_redirected_to adventure_item_path(assigns(:adventure_item))
@@ -35,7 +35,7 @@ class AdventureItemsControllerTest < ActionController::TestCase
   end
 
   test "should update adventure_item" do
-    patch :update, id: @adventure_item, adventure_item: { category: @adventure_item.category, location: @adventure_item.location, picture: @adventure_item.picture, points: @adventure_item.points, title: @adventure_item.title }
+    patch :update, id: @adventure_item, adventure_item: { category: @adventure_item.category, city: @adventure_item.city, neighborhood: @adventure_item.neighborhood, picture: @adventure_item.picture, points: @adventure_item.points, title: @adventure_item.title }
     assert_redirected_to adventure_item_path(assigns(:adventure_item))
   end
 
