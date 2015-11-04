@@ -6,10 +6,12 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>City</th>
+      <th>Description</th>
       <th>Neighborhood</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
       <th>Category</th>
-      <th>Points</th>
       <th>Picture</th>
       <th colspan="3"></th>
     </tr>
@@ -19,10 +21,12 @@
     <% @adventure_items.each do |adventure_item| %>
       <tr>
         <td><%= adventure_item.title %></td>
-        <td><%= adventure_item.city %></td>
+        <td><%= adventure_item.description %></td>
         <td><%= adventure_item.neighborhood %></td>
+        <td><%= adventure_item.city %></td>
+        <td><%= adventure_item.state %></td>
+        <td><%= adventure_item.country %></td>
         <td><%= adventure_item.category %></td>
-        <td><%= adventure_item.points %></td>
         <td><%= adventure_item.picture %></td>
         <td><%= link_to 'Show', adventure_item %></td>
         <td><%= link_to 'Edit', edit_adventure_item_path(adventure_item) %></td>

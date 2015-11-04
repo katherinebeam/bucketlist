@@ -2,16 +2,20 @@
 
 one:
   title: MyString
-  city: MyString
+  description: MyText
   neighborhood: MyString
+  city: MyString
+  state: MyString
+  country: MyString
   category: MyString
-  points: 1
   picture: MyString
 
 two:
   title: MyString
-  city: MyString
+  description: MyText
   neighborhood: MyString
+  city: MyString
+  state: MyString
+  country: MyString
   category: MyString
-  points: 1
   picture: MyString
