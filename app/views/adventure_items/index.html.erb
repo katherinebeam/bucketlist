@@ -27,7 +27,7 @@
         <td><%= adventure_item.state %></td>
         <td><%= adventure_item.country %></td>
         <td><%= adventure_item.category %></td>
-        <td><%= adventure_item.picture %></td>
+        <td><%= image_tag adventure_item.picture_url(:thumb) if adventure_item.picture? %></td>
         <td><%= link_to 'Show', adventure_item %></td>
         <td><%= link_to 'Edit', edit_adventure_item_path(adventure_item) %></td>
         <td><%= link_to 'Destroy', adventure_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Adventure item', new_adventure_item_path %>
+<%= link_to 'New Adventure item', adventure_items_new_path %>

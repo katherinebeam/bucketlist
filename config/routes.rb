@@ -1,14 +1,19 @@
 Rails.application.routes.draw do
-  root to: 'users#new'
   resources :adventure_items
+  root 'adventure_items#index'
+  get 'adventure_items' => 'adventure_items#index'
+  get 'adventure_items/new' => 'adventure_items#new'
+  get 'adventure_items/:id' => 'adventure_items#show', as: :adventure
+  post 'adventure_items' => 'adventure_items#index'
+  get 'signup' => 'users#new'
+  post 'signup' => 'users#create'
   resources :users
 
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 
-  get '/signup' => 'users#new'
-  post '/signup' => 'users#create'
+
 
 
   # get '/login' => 'sessions#new'
