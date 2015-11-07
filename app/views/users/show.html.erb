@@ -1,11 +1,27 @@
-
-<p id="notice"><%= notice %></p>
-
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+<br>
+<p>
+  <strong>Location:</strong>
+  <%= @user.location %>
+</p>
 
 <br>
 <p>
   <strong>Picture:</strong>
   <%= image_tag(@user.picture_url, :width => 600) if @user.picture.present? %>
+</p>
+<br>
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+<br>
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

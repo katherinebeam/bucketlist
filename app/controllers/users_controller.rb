@@ -29,10 +29,19 @@ def index
       redirect_to user_path(user)
     else
       redirect_to '/signup'
-      flash[:notice] = "This email is already has been used!"
+      flash[:notice] = "This email is already taken!"
       flash[:notice] = "This username is already taken!"
     end
   end
+
+  def destroy
+    @user.destroy
+      respond_to do |format|
+      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
 
 private
 
