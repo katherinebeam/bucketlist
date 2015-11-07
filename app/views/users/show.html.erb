@@ -9,9 +9,9 @@
 </p>
 
 <br>
-<p style="height: 50px; width: 50px;">
+<p>
   <strong>Picture:</strong>
-  <%= image_tag(@user.picture_url, :width => 600) if @user.picture.present? %>
+  <%= image_tag(@user.picture_url(:thumb)) if @user.picture.present? %>
 </p>
 <br>
 <p>
