@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   resources :adventure_items
   root 'adventure_items#index'
   get 'adventure_items' => 'adventure_items#index'
