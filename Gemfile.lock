@@ -78,12 +78,9 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.6.2)
-<<<<<<< HEAD
     mimemagic (0.3.0)
-=======
     mini_magick (3.8.0)
       subexec (~> 0.2.1)
->>>>>>> 9fb9f474c2d64e655536dd008c9bb7568ca1cbef
     mini_portile (0.6.2)
     minitest (5.8.2)
     multi_json (1.11.2)
@@ -170,11 +167,7 @@ DEPENDENCIES
   gravtastic
   jbuilder (~> 2.0)
   jquery-rails
-<<<<<<< HEAD
-  paperclip
-=======
   mini_magick (= 3.8.0)
->>>>>>> 9fb9f474c2d64e655536dd008c9bb7568ca1cbef
   rails (= 4.2.4)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
