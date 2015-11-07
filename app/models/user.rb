@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
-  # include Gravtastic
-  # gravtastic
+  has_many :adventure_items
   has_secure_password
   validates :email, presence: true
   validates :email, uniqueness: true

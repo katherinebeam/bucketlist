@@ -1,6 +1,10 @@
 <h1 style="margin-top: 40px;">Edit Profile</h1>
 <%= form_for(current_user) do |f| %>
   <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
     <%= f.label :username %><br>
     <%= f.text_field :username %>
   </div>
