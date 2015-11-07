@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :adventure_items
-  root 'adventure_items#index'
+  root 'welcome#index'
   get 'adventure_items' => 'adventure_items#index'
   get 'adventure_items/new' => 'adventure_items#new'
   get 'adventure_items/:id' => 'adventure_items#show', as: :adventure
