@@ -42,7 +42,7 @@ def index
        format.json { head :no_content }
      end
    end
-   
+
 private
   def set_user
     @user = User.find(params[:id])

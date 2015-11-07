@@ -1,10 +1,9 @@
 class AdventureItemsController < ApplicationController
   before_action :set_adventure_item, only: [:show, :edit, :update, :destroy]
-
   # GET /adventure_items
   # GET /adventure_items.json
   def index
-    @adventure_items = AdventureItem.all
+    @adventure_items = AdventureItem.where(user_id: current_user.id)
   end
 
   # GET /adventure_items/1
@@ -24,7 +23,7 @@ class AdventureItemsController < ApplicationController
   # POST /adventure_items
   # POST /adventure_items.json
   def create
-    @adventure_item = AdventureItem.new(adventure_item_params)
+    @adventure_item = current_user.adventure_items.new(adventure_item_params)
 
     respond_to do |format|
       if @adventure_item.save
@@ -69,6 +68,6 @@ class AdventureItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def adventure_item_params
-      params.require(:adventure_item).permit(:title, :description, :neighborhood, :city, :state, :country, :category, :picture)
+      params.require(:adventure_item).permit(:title, :description, :neighborhood, :city, :state, :country, :category, :picture, :user_id)
     end
 end
