@@ -37,7 +37,7 @@
 <br>
 <p>
   <strong>Picture:</strong>
-  <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+  <%= image_tag(@adventure_item.picture_url, :width => 600) if @adventure_item.picture_url.present? %>
 </p>
 
 <%= link_to 'Edit', edit_adventure_item_path(@adventure_item) %> |
