@@ -1,4 +1,4 @@
-<h1>Edit Profile</h1>
+<h1 style="margin-top: 40px;">Edit Profile</h1>
 <%= form_for(current_user) do |f| %>
   <div class="field">
     <%= f.label :username %><br>
@@ -10,7 +10,7 @@
   </div>
   <div class="field">
     <%= f.label :picture %><br>
-    <%= f.file_field :picture %>
+    <%= f.file_field :picture%>
   </div>
   <div class="field">
     <%= f.label :email %><br>

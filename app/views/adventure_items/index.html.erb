@@ -1,5 +1,21 @@
 <p id="notice"><%= notice %></p>
 
+<p style="margin-top: 40px">
+  <strong>Username:</strong>
+  <%= current_user.username %>
+</p>
+<br>
+<p>
+  <strong>Location:</strong>
+  <%= current_user.location %>
+</p>
+
+<br>
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(current_user.picture_url(:thumb)) if current_user.picture.present? %>
+</p>
+
 <h1>Listing Adventure Items</h1>
 
 <table>
