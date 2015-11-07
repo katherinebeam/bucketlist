@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20151106220127) do
 
   create_table "adventure_items", force: :cascade do |t|
@@ -30,8 +31,8 @@ ActiveRecord::Schema.define(version: 20151106220127) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "username"
     t.string   "location"
     t.string   "picture"
