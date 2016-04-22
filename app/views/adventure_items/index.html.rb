@@ -1,35 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p style="margin-top: 40px">
-  <strong>Username:</strong>
-  <%= current_user.username %>
-</p>
-<br>
-<p>
-  <strong>Location:</strong>
-  <%= current_user.location %>
-</p>
-
-<br>
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag(current_user.picture_url(:thumb)) if current_user.picture.present? %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= current_user.list.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= current_user.list.description %>
-</p>
-
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
-<%= link_to 'New List', new_list_path %>
-
 <h1>Listing Adventure Items</h1>
 
 <table>
